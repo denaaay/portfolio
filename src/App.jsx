@@ -1,10 +1,11 @@
 import { Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
 
 function App() {
   return(
-    <div className='bg-primary text-secondary overflow-x-hidden scroll-smooth text-Poppins'>
+    <div className='w-screen h-screen flex justify-center items-center bg-primary text-secondary overflow-x-hidden scroll-smooth font-poppins'>
       <Routes>
-        <Route/>
+        <Route path='/' element={<Home/>}/>
       </Routes>
     </div>
   );
