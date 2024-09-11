@@ -4,7 +4,7 @@ import FotoGoto from '../assets/images/journey/fotoGoto.png'
 function JourneyContent2(props) {
     return(
         <div className={`w-full h-full rounded-lg ${props.id === 'rg' ? 'bg-journeyRG' : 'bg-journeyGoto'} bg-cover bg-center`}>
-            <div className="w-full h-full rounded-lg bg-journeyShadow relative">
+            <div className="w-full h-full rounded-lg bg-shadow relative">
                 {/* Role Title And Image */}
                 <div className="absolute w-full h-full rounded-b-lg bottom-0 flex flex-col items-center">
                     <div className={`w-full h-full flex justify-center items-center ${props.id === 'goto' && 'bg-gotoShadow rounded-t-lg'}`}>

@@ -4,7 +4,7 @@ import FotoBB from '../assets/images/journey/fotoBB.png'
 function JourneyContent(props) {
     return(
         <div className={`w-full h-full rounded-lg ${props.id === 'unej' ? 'bg-journeyUnej bg-zoom' : 'bg-journeyBB'} bg-cover bg-center`}>
-            <div className="w-full h-full rounded-lg bg-journeyShadow relative">
+            <div className="w-full h-full rounded-lg bg-shadow relative">
                 {/* Role Title And Image */}
                 <div className="absolute w-full h-max rounded-b-lg bottom-0 flex flex-col items-center">
                     <div className="w-full h-[40vh] flex">
