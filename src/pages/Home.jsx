@@ -16,7 +16,7 @@ function Home() {
     }
 
     return(
-        <div className="w-[87%] h-[97%] flex flex-col justify-between items-center gap-4">
+        <div className="w-[85%] h-[97%] flex flex-col justify-between items-center gap-4">
             {/* Title */}
             <div className="w-full h-max py-2 flex justify-between items-center">
                 <p className="font-bold text-xl">dfahrony</p>
@@ -66,7 +66,7 @@ function Home() {
                             </div>
 
                             {/* Navigation Button */}
-                            <NavButton home={true}/>
+                            <NavButton page='home'/>
                         </div>
                     </div>
                 </div>
