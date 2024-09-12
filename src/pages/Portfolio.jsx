@@ -56,7 +56,7 @@ function Portfolio(){
                         {/* Programming Languages */}
                         <div className="w-full flex flex-wrap gap-3">
                             {tech1.map((tech, index) => {
-                                return <div key={index} className="px-4 py-2 bg-element1 text-white rounded">
+                                return <div key={index} className="px-4 py-2 bg-element1 text-secondary rounded">
                                     {tech}
                                 </div>
                             })}
@@ -65,7 +65,7 @@ function Portfolio(){
                         {/* Framework */}
                         <div className="w-full flex flex-wrap gap-3">
                             {tech2.map((tech, index) => {
-                                return <div key={index} className="px-4 py-2 bg-element2 text-white rounded">
+                                return <div key={index} className="px-4 py-2 bg-element2 text-secondary rounded">
                                     {tech}
                                 </div>
                             })}
@@ -74,7 +74,7 @@ function Portfolio(){
                         {/* Tools */}
                         <div className="w-full flex flex-wrap gap-3">
                             {tech3.map((tech, index) => {
-                                return <div key={index} className="px-4 py-2 bg-element1 text-white rounded">
+                                return <div key={index} className="px-4 py-2 bg-element1 text-secondary rounded">
                                     {tech}
                                 </div>
                             })}

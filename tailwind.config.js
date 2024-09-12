@@ -10,6 +10,7 @@ export default {
         homeImageShadowRight: 'linear-gradient(to left, rgba(2, 2, 2, 0.5) 0%, rgba(2, 2, 2, 0) 100%)',
         journeyUnej: 'url("../src/assets/images/journey/fotoUnejBackground.jpg")',
         journeyBB: 'url("../src/assets/images/journey/fotoBBBackground.jpg")',
+        journeyBB2: 'url("../src/assets/images/journey/fotoBBBackground2.jpg")',
         journeyRG: 'url("../src/assets/images/journey/fotoRGBackground.jpg")',
         journeyGoto: 'url("../src/assets/images/journey/fotoGotoBackground.jpg")',
         shadow: 'linear-gradient(to left, rgba(2, 2, 2, 0.5) 0%, rgba(2, 2, 2, 0.5) 100%)',
@@ -21,7 +22,7 @@ export default {
         projectGacoanBackground: 'url("../src/assets/images/projects/gacoanBackground.jpg")',
       },
       backgroundSize: {
-        zoom: '180%'
+        zoom: '160%'
       },
       colors: {
         primary: '#020202',
