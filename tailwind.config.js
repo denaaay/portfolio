@@ -8,7 +8,7 @@ export default {
         homeImage: 'url("../src/assets/images/homeImage.jpg")',
         homeImageShadowLeft: 'linear-gradient(to right, rgba(2, 2, 2, 0.5) 0%, rgba(2, 2, 2, 0) 100%)',
         homeImageShadowRight: 'linear-gradient(to left, rgba(2, 2, 2, 0.5) 0%, rgba(2, 2, 2, 0) 100%)',
-        journeyUnej: 'url("../src/assets/images/journey/fotoUnejBackground.jpg")',
+        // journeyUnej: 'url("../src/assets/images/journey/fotoUnejBackground.jpg")',
         journeyBB: 'url("../src/assets/images/journey/fotoBBBackground.jpg")',
         journeyBB2: 'url("../src/assets/images/journey/fotoBBBackground2.jpg")',
         journeyRG: 'url("../src/assets/images/journey/fotoRGBackground.jpg")',
