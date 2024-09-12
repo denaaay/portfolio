@@ -22,6 +22,7 @@ export default {
         projectGacoanBackground: 'url("../src/assets/images/projects/gacoanBackground.jpg")',
       },
       backgroundSize: {
+        zoomContent: '120%',
         zoom: '160%'
       },
       colors: {

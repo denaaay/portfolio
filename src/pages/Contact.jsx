@@ -1,9 +1,19 @@
 import ContentTitle from "../components/ContentTitle";
 import NavButton from "../components/NavButton";
-import FotoUnejBackground from '../assets/images/journey/fotoUnejBackground.jpg';
-import FotoBBBackground from '../assets/images/journey/fotoBBBackground.jpg';
 
 function Contact() {
+    const handleClick = (route) => {
+        if (route === 'in') {
+            window.open('https://www.linkedin.com/in/dfahrony/', '_blank');
+        } else if (route === 'yt') {
+            window.open('https://youtube.com/@dfahrony1218?si=XX_CjDl9ayv4Xfi1', '_blank');
+        } else if (route === 'ig') {
+            window.open('https://instagram.com/dfahrony', '_blank');
+        } else if (route === 'git') {
+            window.open('https://github.com/denaaay', '_blank');
+        }
+    }
+    
     return(
         <div className="w-[85%] h-[90%] flex justify-between gap-10">
             {/* Contact */}
@@ -20,22 +30,22 @@ function Contact() {
                     {/* Contact List */}
                     <div className="w-full h-full flex flex-col justify-center items-start gap-6 text-xl text-secondary">
                         {/* Linkedin */}
-                        <div className="w-max px-4 py-2 bg-element1 rounded">
+                        <div className="w-max px-4 py-2 bg-element1 rounded cursor-pointer hover:bg-secondary hover:text-primary transition duration-500" onClick={() => handleClick('in')}>
                             linkedin @dfahrony
                         </div>
 
                         {/* Youtube */}
-                        <div className="w-max px-4 py-2 bg-element2 rounded">
+                        <div className="w-max px-4 py-2 bg-element2 rounded cursor-pointer hover:bg-secondary hover:text-primary transition duration-500" onClick={() => handleClick('yt')}>
                             youtube @DFahrony
                         </div>
 
                         {/* Instagram */}
-                        <div className="w-max px-4 py-2 bg-element1 rounded">
+                        <div className="w-max px-4 py-2 bg-element1 rounded cursor-pointer hover:bg-secondary hover:text-primary transition duration-500" onClick={() => handleClick('ig')}>
                             instagram @dfahrony
                         </div>
 
                         {/* Github */}
-                        <div className="w-max px-4 py-2 bg-element2 rounded">
+                        <div className="w-max px-4 py-2 bg-element2 rounded cursor-pointer hover:bg-secondary hover:text-primary transition duration-500" onClick={() => handleClick('git')}>
                             github @denaaay
                         </div>
 
