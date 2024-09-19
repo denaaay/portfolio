@@ -4,8 +4,18 @@ import ContentTitle from "../components/ContentTitle";
 import JourneyContent from "../components/JourneyContent";
 import JourneyContent2 from "../components/JourneyContent2";
 import CommingSoon from "../components/CommingSoon";
+import { useEffect, useState } from "react";
+import Loading from "../components/Loading";
 
 function About() {
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        setTimeout(() => {
+            setLoading(false);
+        }, 4000);
+    }, []);
+
     return(
         <div className="w-screen h-screen flex justify-center items-center">
             {window.matchMedia("(max-width: 1024px)").matches ? 
@@ -51,6 +61,10 @@ function About() {
                                 <JourneyContent id='bb'/>
                             </div>
                         </div>
+                    </div>
+
+                    <div className={`absolute fixed top-0 right-0 w-screen h-screen bg-black z-40 translate-x-0 overflow-hidden ${!loading ? 'translate-x-[-100%]' : 'translate-x-0 delay-700'} transition-transform duration-1000 ease-out`}>
+                        <Loading />
                     </div>
                 </div>
             }

@@ -3,11 +3,20 @@ import NavButton from "../components/NavButton";
 import ProjectsContent from "../components/ProjectsContent";
 import GithubIcon from '../assets/icon/github.png';
 import CommingSoon from "../components/CommingSoon";
+import { useEffect, useState } from "react";
+import Loading from "../components/Loading";
 
 function Portfolio(){
+    const [loading, setLoading] = useState(true);
     const tech1 = ['golang', 'javascript', 'dart', 'python', 'html', 'css', 'sql']
     const tech2 = ['rest', 'gin', 'gorm', 'node', 'express', 'react', 'flutter', 'tailwind', 'bootstrap', 'mysql', 'postgres', 'mongodb', 'redis']
     const tech3 = ['git', 'vscode', 'postman', 'figma', 'pgadmin']
+
+    useEffect(() => {
+        setTimeout(() => {
+            setLoading(false);
+        }, 4000);
+    }, []);
 
     const handleClick = (route) => {
         if (route === 'mojave') {
@@ -100,6 +109,10 @@ function Portfolio(){
                         <div className="w-full h-max flex justify-end">
                             <NavButton page='portfolio'/>
                         </div>
+                    </div>
+
+                    <div className={`absolute fixed top-0 right-0 w-screen h-screen bg-black z-40 translate-x-0 overflow-hidden ${!loading ? 'translate-x-[-100%]' : 'translate-x-0 delay-700'} transition-transform duration-1000 ease-out`}>
+                        <Loading />
                     </div>
                 </div>
             }

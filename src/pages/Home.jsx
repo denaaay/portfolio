@@ -1,8 +1,17 @@
 import profileTitle from '../assets/images/profileTitle.png';
 import NavButton from '../components/NavButton';
 import CommingSoon from '../components/CommingSoon';
+import Loading from '../components/Loading';
+import { useEffect, useState } from 'react';
 
 function Home() {
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        setTimeout(() => {
+            setLoading(false);
+        }, 4000);
+    }, []);
 
     const handleClick = (route) => {
         if (route === 'in') {
@@ -86,6 +95,10 @@ function Home() {
                                 </div>
                             </div>
                         </div>
+                    </div>
+
+                    <div className={`absolute fixed top-0 right-0 w-screen h-screen bg-black z-40 translate-x-0 overflow-hidden ${!loading ? 'translate-x-[-100%]' : 'translate-x-0 delay-700'} transition-transform duration-1000 ease-out`}>
+                        <Loading />
                     </div>
                 </div>
             }
