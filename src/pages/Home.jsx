@@ -31,7 +31,7 @@ function Home() {
     }
 
     const handleDownload = () => {
-        window.open('../src/assets/file/resume.pdf', '_blank')
+        window.open('/resume.pdf', '_blank')
 
         // Membuat elemen <a> untuk mendownload file PDF
         const link = document.createElement('a');
