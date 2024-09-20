@@ -3,7 +3,7 @@ import FotoBB from '../assets/images/journey/fotoBB.png'
 
 function JourneyContent(props) {
     return(
-        <div className={`w-full h-full rounded-lg ${props.id === 'unej' ? 'bg-journeyUnej bg-zoom' : 'bg-journeyBB'} bg-cover bg-center`}>
+        <div className={`w-full h-full rounded-lg ${props.id === 'unej' ? 'bg-journeyUnej bg-zoom delay-[6000ms]' : 'bg-journeyBB delay-[6700ms]'} bg-cover bg-center`} data-aos="flip-left" data-aos-duration="1000" data-aos-easing="linear">
             <div className="w-full h-full rounded-lg bg-shadow relative">
                 {/* Role Title And Image */}
                 <div className="absolute w-full h-max rounded-b-lg bottom-0 flex flex-col items-center">
