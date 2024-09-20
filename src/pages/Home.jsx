@@ -35,7 +35,7 @@ function Home() {
 
         // Membuat elemen <a> untuk mendownload file PDF
         const link = document.createElement('a');
-        link.href = '../src/assets/file/resume.pdf'; // Path ke file PDF
+        link.href = '/resume.pdf'; // Path ke file PDF
         link.download = 'Resume-Deni_Fahrony.pdf'; // Nama file yang akan diunduh
         document.body.appendChild(link);
         link.click();
