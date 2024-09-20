@@ -6,11 +6,16 @@ import { useEffect, useState } from 'react';
 
 function Home() {
     const [loading, setLoading] = useState(true);
+    const [hoverLoading, setHoverLoading] = useState(false);
 
     useEffect(() => {
         setTimeout(() => {
             setLoading(false);
         }, 4000);
+
+        setTimeout(() => {
+            setHoverLoading(true);
+        }, 5000)
     }, []);
 
     const handleClick = (route) => {
@@ -56,21 +61,21 @@ function Home() {
                                 <div className="w-full h-full rounded-l-xl flex flex-col justify-between items-start pl-6 py-6">
                                     {/* Title */}
                                     <div className="w-[45%] h-max">
-                                        <img src={profileTitle} alt="profileTitle.png" />
+                                        <img src={profileTitle} alt="profileTitle.png" data-aos="fade-right" data-aos-duration="700" data-aos-easing="linear" className='delay-[4500ms]'/>
                                     </div>
 
                                     {/* Social Media Button */}
                                     <div className='w-max h-[50px] relative'>
-                                        <div className='absolute w-[50px] h-[50px] border-[1px] border-secondary rounded-full bg-transparent bottom-0 left-0 flex justify-center items-center cursor-pointer hover:bg-secondary hover:text-primary transition duration-500' onClick={() => handleClick('in')}>
+                                        <div className={`absolute w-[50px] h-[50px] border-[1px] border-secondary rounded-full bg-transparent bottom-0 left-0 flex justify-center items-center cursor-pointer hover:bg-secondary hover:text-primary transition duration-700 ${loading ? 'opacity-0' : 'opacity-100'} ${hoverLoading ? 'delay-0 duration-500' : 'delay-[1000ms]'}`} onClick={() => handleClick('in')}>
                                             <p className='text-xl font-thin'>in</p>
                                         </div>
-                                        <div className='absolute w-[50px] h-[50px] border-[1px] border-secondary rounded-full bg-transparent bottom-0 left-[40px] flex justify-center items-center cursor-pointer hover:bg-secondary hover:text-primary transition duration-500' onClick={() => handleClick('yt')}>
+                                        <div className={`absolute w-[50px] h-[50px] border-[1px] border-secondary rounded-full bg-transparent bottom-0 left-[40px] flex justify-center items-center cursor-pointer hover:bg-secondary hover:text-primary transition duration-700 ${loading ? 'opacity-0' : 'opacity-100'} ${hoverLoading ? 'delay-0 duration-500' : 'delay-[1300ms]'}`} onClick={() => handleClick('yt')}>
                                             <p className='text-xl font-thin'>yt</p>
                                         </div>
-                                        <div className='absolute w-[50px] h-[50px] border-[1px] border-secondary rounded-full bg-transparent bottom-0 left-[80px] flex justify-center items-center cursor-pointer hover:bg-secondary hover:text-primary transition duration-500' onClick={() => handleClick('ig')}>
+                                        <div className={`absolute w-[50px] h-[50px] border-[1px] border-secondary rounded-full bg-transparent bottom-0 left-[80px] flex justify-center items-center cursor-pointer hover:bg-secondary hover:text-primary transition duration-700 ${loading ? 'opacity-0' : 'opacity-100'} ${hoverLoading ? 'delay-0 duration-500' : 'delay-[1500ms]'}`} onClick={() => handleClick('ig')}>
                                             <p className='text-xl font-thin'>ig</p>
                                         </div>
-                                        <div className='absolute w-[50px] h-[50px] border-[1px] border-secondary rounded-full bg-transparent bottom-0 left-[120px] flex justify-center items-center cursor-pointer hover:bg-secondary hover:text-primary transition duration-500' onClick={() => handleClick('git')}>
+                                        <div className={`absolute w-[50px] h-[50px] border-[1px] border-secondary rounded-full bg-transparent bottom-0 left-[120px] flex justify-center items-center cursor-pointer hover:bg-secondary hover:text-primary transition duration-700 ${loading ? 'opacity-0' : 'opacity-100'} ${hoverLoading ? 'delay-0 duration-500' : 'delay-[1700ms]'}`} onClick={() => handleClick('git')}>
                                             <p className='text-xl font-thin'>git</p>
                                         </div>
                                     </div>
@@ -83,21 +88,21 @@ function Home() {
                                 <div className="w-full h-full rounded-l-xl flex flex-col justify-between items-end pr-6 py-6 font-bold tracking-wider">
                                     {/* Name and Detail */}
                                     <div className='w-full h-max flex flex-col justify-start items-end text-8xl'>
-                                        <p>Deni</p>
-                                        <p>Fahrony</p>
-                                        <div className='w-[65%] h-max rounded bg-primary bg-opacity-30 mt-10 p-4'>
+                                        <p data-aos="fade-left" data-aos-duration="700" data-aos-easing="linear" className='delay-[4000ms]'>Deni</p>
+                                        <p data-aos="fade-left" data-aos-duration="700" data-aos-easing="linear" className='delay-[4300ms]'>Fahrony</p>
+                                        <div className='w-[65%] h-max rounded bg-primary bg-opacity-30 mt-10 p-4 delay-[4800ms]' data-aos="flip-left" data-aos-duration="700" data-aos-easing="linear">
                                             <p className='font-semibold text-sm text-right leading-6'>I am a motivated and skilled backend engineer specializing in Golang and full stack engineer using MERN stack.</p>
                                         </div>
                                     </div>
 
                                     {/* Navigation Button */}
-                                    <NavButton page='home'/>
+                                    <NavButton page='home' isLoading={loading}/>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div className={`absolute fixed top-0 right-0 w-screen h-screen bg-black z-40 translate-x-0 overflow-hidden ${!loading ? 'translate-x-[-100%]' : 'translate-x-0 delay-700'} transition-transform duration-1000 ease-out`}>
+                    <div className={`absolute fixed top-0 right-0 w-screen h-screen z-40 translate-x-0 overflow-hidden ${!loading ? 'translate-x-[-100%]' : 'translate-x-0 delay-700'} transition-transform duration-1000 ease-out`}>
                         <Loading />
                     </div>
                 </div>

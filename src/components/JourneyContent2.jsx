@@ -3,7 +3,7 @@ import FotoGoto from '../assets/images/journey/fotoGoto.png'
 
 function JourneyContent2(props) {
     return(
-        <div className={`w-full h-full rounded-lg ${props.id === 'rg' ? 'bg-journeyRG' : 'bg-journeyGoto'} bg-cover bg-center`}>
+        <div className={`w-full h-full rounded-lg ${props.id === 'rg' ? 'bg-journeyRG delay-[6300ms]' : 'bg-journeyGoto delay-[6500ms]'} bg-cover bg-center`} data-aos="flip-down" data-aos-duration="1000" data-aos-easing="linear">
             <div className="w-full h-full rounded-lg bg-shadow relative">
                 {/* Role Title And Image */}
                 <div className="absolute w-full h-full rounded-b-lg bottom-0 flex flex-col items-center">

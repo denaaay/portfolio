@@ -26,7 +26,7 @@ export default {
         zoom: '160%'
       },
       colors: {
-        primary: '#020202',
+        primary: '#000000',
         secondary: '#F8F7F3',
         element1: '#222F3E',
         element2: '#576574',

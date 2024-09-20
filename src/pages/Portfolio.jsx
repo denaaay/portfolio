@@ -8,6 +8,7 @@ import Loading from "../components/Loading";
 
 function Portfolio(){
     const [loading, setLoading] = useState(true);
+    const [hoverLoading, setHoverLoading] = useState(false);
     const tech1 = ['golang', 'javascript', 'dart', 'python', 'html', 'css', 'sql']
     const tech2 = ['rest', 'gin', 'gorm', 'node', 'express', 'react', 'flutter', 'tailwind', 'bootstrap', 'mysql', 'postgres', 'mongodb', 'redis']
     const tech3 = ['git', 'vscode', 'postman', 'figma', 'pgadmin']
@@ -16,6 +17,10 @@ function Portfolio(){
         setTimeout(() => {
             setLoading(false);
         }, 4000);
+
+        setTimeout(() => {
+            setHoverLoading(true);
+        }, 5000)
     }, []);
 
     const handleClick = (route) => {
@@ -37,31 +42,31 @@ function Portfolio(){
                 <div className="w-[85%] h-[90%] flex justify-between gap-10">
                     {/* Portfolio */}
                     <div className="flex-[6] h-full flex flex-col justify-between gap-8">
-                        <ContentTitle title='projects'/>
+                        <ContentTitle title='projects' isLoading={loading} delay={'delay-[500ms]'}/>
 
                         {/* Content */}
                         <div className="w-full h-full bg-projectBackground bg-cover bg-center rounded-lg">
                             <div className="w-full h-full rounded-lg bg-shadow flex flex-col">
                                 <div className="flex-1 w-full rounded-t-lg flex items-center">
                                     <div className="flex-1"></div>
-                                    <div className="flex-[2] h-full rounded-tr-lg bg-projectMojaveBackground bg-cover bg-center cursor-pointer hover:bg-zoomContent transition-all duration-500" onClick={() => handleClick('mojave')}>
+                                    <div data-aos="flip-up" data-aos-duration="1000" data-aos-easing="linear" className={`flex-[2] h-full rounded-tr-lg bg-projectMojaveBackground bg-cover bg-center cursor-pointer hover:bg-zoomContent transition-all duration-700 delay-[4700ms]`} onClick={() => handleClick('mojave')}>
                                         <div className="w-full h-full rounded-tr-lg bg-shadow flex justify-center items-center">
                                             <p className="font-bold text-4xl">MOJAVE HOME</p>
                                         </div>
                                     </div>
                                 </div>
                                 <div className="flex-1 w-full flex items-center">
-                                    <div className="flex-1 h-full bg-projectKanbanBackground bg-cover bg-center cursor-pointer hover:bg-zoom transition-all duration-500" onClick={() => handleClick('kanban')}>
+                                    <div className="flex-1 h-full bg-projectKanbanBackground bg-cover bg-center cursor-pointer hover:bg-zoom transition-all duration-700 delay-[4900ms]" onClick={() => handleClick('kanban')} data-aos="flip-up" data-aos-duration="1000" data-aos-easing="linear">
                                         <ProjectsContent id='kanban'/>
                                     </div>
-                                    <div className="flex-1 h-full bg-projectTokpedBackground bg-cover bg-center cursor-pointer hover:bg-zoomContent transition-all duration-500" onClick={() => handleClick('tokped')}>
+                                    <div className="flex-1 h-full bg-projectTokpedBackground bg-cover bg-center cursor-pointer hover:bg-zoomContent transition-all duration-700 delay-[5100ms]" onClick={() => handleClick('tokped')} data-aos="flip-up" data-aos-duration="1000" data-aos-easing="linear">
                                         <ProjectsContent id='tokped'/>
                                     </div>
                                     <div className="flex-1 h-full"></div>
                                 </div>
                                 <div className="flex-1 w-full rounded-b-lg flex items-center">
                                     <div className="flex-1 h-full"></div>
-                                    <div className="flex-1 h-full bg-projectGacoanBackground bg-cover bg-center cursor-pointer hover:bg-zoom transition-all duration-500" onClick={() => handleClick('gacoan')}>
+                                    <div className="flex-1 h-full bg-projectGacoanBackground bg-cover bg-center cursor-pointer hover:bg-zoom transition-all duration-700 delay-[5300ms]" onClick={() => handleClick('gacoan')} data-aos="flip-up" data-aos-duration="1000" data-aos-easing="linear">
                                         <ProjectsContent id='gacoan'/>
                                     </div>
                                     <div className="flex-1 h-full flex justify-center items-center">
@@ -72,14 +77,14 @@ function Portfolio(){
                         </div>
                     </div>
                     <div className="flex-[3] h-full flex flex-col justify-between gap-8">
-                        <ContentTitle title='technology'/>
+                        <ContentTitle title='technology' isLoading={loading} delay={'delay-[1700ms]'}/>
 
                         {/* Content */}
                         <div className="w-full h-full flex flex-col justify-between items-start">
                             {/* Skills */}
                             <div className="w-full h-full flex flex-col justify-start items-start gap-8">
                                 {/* Programming Languages */}
-                                <div className="w-full flex flex-wrap gap-3">
+                                <div className="w-full flex flex-wrap gap-3 delay-[5700ms]" data-aos="fade-left" data-aos-duration="1000" data-aos-easing="linear">
                                     {tech1.map((tech, index) => {
                                         return <div key={index} className="px-4 py-2 bg-element1 text-secondary rounded">
                                             {tech}
@@ -88,7 +93,7 @@ function Portfolio(){
                                 </div>
 
                                 {/* Framework */}
-                                <div className="w-full flex flex-wrap gap-3">
+                                <div className="w-full flex flex-wrap gap-3 delay-[6000ms]" data-aos="fade-left" data-aos-duration="1000" data-aos-easing="linear">
                                     {tech2.map((tech, index) => {
                                         return <div key={index} className="px-4 py-2 bg-element2 text-secondary rounded">
                                             {tech}
@@ -97,7 +102,7 @@ function Portfolio(){
                                 </div>
 
                                 {/* Tools */}
-                                <div className="w-full flex flex-wrap gap-3">
+                                <div className="w-full flex flex-wrap gap-3 delay-[6300ms]" data-aos="fade-left" data-aos-duration="1000" data-aos-easing="linear">
                                     {tech3.map((tech, index) => {
                                         return <div key={index} className="px-4 py-2 bg-element1 text-secondary rounded">
                                             {tech}
@@ -107,7 +112,7 @@ function Portfolio(){
                             </div>
                         </div>
                         <div className="w-full h-max flex justify-end">
-                            <NavButton page='portfolio'/>
+                            <NavButton page='portfolio' isLoading={loading}/>
                         </div>
                     </div>
 
